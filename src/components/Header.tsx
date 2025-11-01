@@ -21,7 +21,12 @@ function Header() {
         </div>
         
         <div className="header-right">
-          <button className="login-btn">Đăng ký</button>
+          <button 
+            className="login-btn"
+            onClick={() => window.open('https://www.facebook.com/Nhahatkimma/events/?id=61573061699178&sk=events', '_blank')}
+          >
+            Đăng ký
+          </button>
         </div>
       </div>
     </header>
