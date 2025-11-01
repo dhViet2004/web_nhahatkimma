@@ -1,0 +1,205 @@
+.quote {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Background Images */
+.quote-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.quote-slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.quote-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.quote-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.25;
+  filter: brightness(0.8);
+}
+
+/* Content Overlay */
+.quote-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.quote-text-wrapper {
+  max-width: 900px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.quote-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.8;
+  margin: 0 0 30px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+}
+
+.quote-btn {
+  background: rgb(211, 175, 55);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 15px rgba(244, 197, 66, 0.4);
+}
+
+.quote-btn:hover {
+  background: rgb(211, 175, 55);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(244, 197, 66, 0.6);
+}
+
+/* Dots Indicator */
+.quote-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+}
+
+.quote-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.quote-dot:hover {
+  background-color: rgba(244, 197, 66, 0.7);
+  border-color: #f4c542;
+  transform: scale(1.2);
+}
+
+.quote-dot.active {
+  background-color: #f4c542;
+  border-color: #f4c542;
+  width: 35px;
+  border-radius: 6px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .quote-container {
+    height: 450px;
+  }
+  
+  .quote-text-wrapper {
+    max-width: 700px;
+    padding: 35px;
+  }
+  
+  .quote-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-container {
+    height: 400px;
+  }
+  
+  .quote-text-wrapper {
+    max-width: 90%;
+    padding: 30px 25px;
+  }
+  
+  .quote-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  
+  .quote-btn {
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+  
+  .quote-dots {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-container {
+    height: 350px;
+  }
+  
+  .quote-text-wrapper {
+    padding: 25px 20px;
+  }
+  
+  .quote-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .quote-btn {
+    padding: 10px 28px;
+    font-size: 13px;
+  }
+  
+  .quote-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .quote-dot.active {
+    width: 28px;
+  }
+}
+

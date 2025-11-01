@@ -1,0 +1,370 @@
+.footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #3a3025;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.footer-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 50px;
+}
+
+.footer-section {
+  color: #e8e0d9;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f4c542;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Cinzel', serif;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f4c542;
+  display: inline-block;
+  line-height: 1.5;
+}
+.footer-title-keep{
+  font-size: 16px;
+  font-weight: 700;
+  color: #f4c542;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Cinzel', serif;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f4c542;
+  display: inline-block;
+  margin-right: 40px;
+  line-height: 1.5;
+}
+/* Cột 1: Thông tin liên hệ */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: self-start;
+  gap: 15px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact-item span {
+  line-height: 1.5;
+}
+
+.contact-icon {
+  color: #f4c542;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.contact-item a {
+  color: #e8e0d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #f4c542;
+}
+
+.footer-logo {
+  margin-top: 30px;
+}
+
+.logo-image {
+  width: 140px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Cột 2: Bản đồ */
+.map-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.map-container iframe {
+  display: block;
+}
+
+/* Cột 3: Keep in Touch */
+.keep-in-touch-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-logo-social {
+  margin-bottom: 30px;
+  padding-right: 25px;
+}
+
+.logo-image-social {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image-social:hover {
+  transform: scale(1.05);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.social-btn:hover {
+  background-color: #f4c542;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(244, 197, 66, 0.4);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #1c1c1c;
+  margin-top: 50px;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #888888;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.floating-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: #ffffff;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #f57c00, #e65100);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
+}
+
+.scroll-top-btn {
+  background: linear-gradient(135deg, #f4c542, #d4a628);
+  color: #1a1a1a;
+}
+
+.scroll-top-btn:hover {
+  background: linear-gradient(135deg, #d4a628, #b8911f);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(244, 197, 66, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 40px 0 0;
+  }
+
+  .footer-container {
+    padding: 0 20px;
+    gap: 35px;
+  }
+
+  .footer-title {
+    font-size: 15px;
+   
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  .logo-image {
+    width: 120px;
+  }
+
+  .logo-image-social {
+    width: 150px;
+  }
+
+  .social-btn {
+    width: 55px;
+    height: 55px;
+  }
+
+  .floating-buttons {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 15px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  .logo-image {
+    width: 100px;
+  }
+
+  .logo-image-social {
+    width: 130px;
+  }
+
+  .social-buttons {
+    gap: 15px;
+  }
+
+  .social-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-bottom {
+    padding: 15px 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+  }
+
+  .floating-buttons {
+    bottom: 15px;
+    right: 15px;
+    gap: 12px;
+  }
+
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
