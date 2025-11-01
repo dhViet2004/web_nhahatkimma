@@ -1,5 +1,12 @@
 import './Header.css'
 
+declare global {
+  interface Window {
+    gtag?: (command: string, targetId: string, config?: object) => void;
+    dataLayer?: unknown[];
+  }
+}
+
 function Header() {
   return (
     <header className="header">
@@ -15,15 +22,24 @@ function Header() {
             <span className="value">onderaoeberg@gmail.com</span>
           </div>
         </div>
-        
+
         <div className="header-center">
           <h1 className="theater-name">NHÀ HÁT SÂN KHẤU QUỐC GIA VIỆT NAM</h1>
         </div>
-        
+
         <div className="header-right">
-          <button 
+          <button
             className="login-btn"
-            onClick={() => window.open('https://www.facebook.com/Nhahatkimma/events/?id=61573061699178&sk=events', '_blank')}
+            onClick={() => {
+              const url = 'https://www.facebook.com/Nhahatkimma/events/?id=61573061699178&sk=events';
+              if (window.gtag) {
+                window.gtag('event', 'dang_ky_facebook', {
+                  'button_location': 'header_right',
+                  'link_url': url
+                });
+              }
+              window.open(url, '_blank');
+            }}
           >
             Đăng ký
           </button>
