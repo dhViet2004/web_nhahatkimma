@@ -159,8 +159,19 @@ Một trong những dấu ấn góp phần đưa Xúy Vân trở thành một t�
 
         {/* Tiêu đề */}
         <h1 className="page-title">Chương trình biểu diễn</h1>
-
         
+        {/* Bộ lọc thể loại */}
+        <div className="filters">
+          {filters.map(f => (
+            <button
+              key={f}
+              className={`filter-btn ${activeFilter === f ? 'active' : ''}`}
+              onClick={() => { setActiveFilter(f); setCurrentPage(1); }}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
 
         {/* Đường kẻ phân cách */}
         <hr className="divider" />
