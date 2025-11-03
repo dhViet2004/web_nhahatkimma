@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Programs.css'
 import poster1 from '../assets/Poster2.jpg'
 import poster2 from '../assets/Poster-cheo2.jpg'
@@ -114,7 +115,12 @@ function Programs() {
                             <line x1="3" y1="10" x2="21" y2="10"></line>
                           </svg>
                           <span>{date.date}</span>
-                          <button className="register-btn">ĐĂNG KÝ</button>
+                          <button 
+                            className="register-btn"
+                            onClick={() => window.open('https://www.facebook.com/Nhahatkimma/events/?id=61573061699178&sk=events', '_blank')}
+                          >
+                            ĐĂNG KÝ
+                          </button>
                         </div>
                       ))}
                     </div>
@@ -146,7 +152,7 @@ function Programs() {
         </div>
 
         <div className="programs-footer">
-          <button className="view-all-btn">Xem tất cả →</button>
+          <Link to="/programs" className="view-all-btn">Xem tất cả →</Link>
         </div>
       </div>
     </section>

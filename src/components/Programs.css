@@ -221,6 +221,7 @@
 }
 
 .view-all-btn {
+  display: inline-block;
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #f4c542;
@@ -231,6 +232,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .view-all-btn:hover {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Quote.css'
 import quote1 from '../assets/quote(1).jpg'
 import quote2 from '../assets/quote(2).jpg'
@@ -51,7 +52,7 @@ function Quote() {
             <p className="quote-text">
               Nhà hát Sân khấu Quốc gia Việt Nam là nơi sưu tầm, nghiên cứu, bảo tồn gìn giữ và phát triển những giá trị tinh hoa nghệ thuật Chèo - Tuồng - Cải Lương Việt Nam.
             </p>
-            <button className="quote-btn">VỀ CHÚNG TÔI</button>
+            <Link to="/about" className="quote-btn">VỀ CHÚNG TÔI</Link>
           </div>
         </div>
 

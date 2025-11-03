@@ -69,6 +69,16 @@
   align-items: center;
 }
 
+.theater-name-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.theater-name-link:hover {
+  transform: translateY(-2px);
+}
+
 .theater-name {
   font-family: 'Cinzel', serif;
   font-size: 28px;
@@ -81,6 +91,12 @@
   padding: 8px 20px;
   border-radius: 4px;
   white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.theater-name-link:hover .theater-name {
+  color: #f4c542;
 }
 
 .header-right {

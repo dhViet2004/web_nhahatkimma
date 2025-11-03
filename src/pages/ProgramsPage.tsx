@@ -15,7 +15,6 @@ import poster10 from '../assets/dai-than-thang-long.jpg'
 import poster11 from '../assets/doi-co-luu.jpg'
 import poster12 from '../assets/nghieu-so-oc-hen.jpg'
 function ProgramsPage() {
-  const [activeFilter, setActiveFilter] = useState('Tất cả')
   const [currentPage, setCurrentPage] = useState(1)
 
   const programs = [
@@ -135,17 +134,11 @@ Một trong những dấu ấn góp phần đưa Xúy Vân trở thành một t�
     
   ]
 
-  const filters = ['Tất cả', 'Hòa tấu', 'Hòa nhạc', 'Live Concert', 'Nhạc kịch']
-
-  const filteredPrograms = activeFilter === 'Tất cả'
-    ? programs
-    : programs.filter(p => p.category === activeFilter)
-
   // Phân trang: 4 mục mỗi trang
   const PAGE_SIZE = 4
-  const totalPages = Math.ceil(filteredPrograms.length / PAGE_SIZE)
+  const totalPages = Math.ceil(programs.length / PAGE_SIZE)
   const start = (currentPage - 1) * PAGE_SIZE
-  const paginatedPrograms = filteredPrograms.slice(start, start + PAGE_SIZE)
+  const paginatedPrograms = programs.slice(start, start + PAGE_SIZE)
 
   return (
     <div className="programs-page">
@@ -159,19 +152,6 @@ Một trong những dấu ấn góp phần đưa Xúy Vân trở thành một t�
 
         {/* Tiêu đề */}
         <h1 className="page-title">Chương trình biểu diễn</h1>
-        
-        {/* Bộ lọc thể loại */}
-        <div className="filters">
-          {filters.map(f => (
-            <button
-              key={f}
-              className={`filter-btn ${activeFilter === f ? 'active' : ''}`}
-              onClick={() => { setActiveFilter(f); setCurrentPage(1); }}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
 
         {/* Đường kẻ phân cách */}
         <hr className="divider" />

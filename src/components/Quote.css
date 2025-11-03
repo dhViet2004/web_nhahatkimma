@@ -76,6 +76,7 @@
 }
 
 .quote-btn {
+  display: inline-block;
   background: rgb(211, 175, 55);
   color: #ffffff;
   border: none;
@@ -88,6 +89,7 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   box-shadow: 0 4px 15px rgba(244, 197, 66, 0.4);
+  text-decoration: none;
 }
 
 .quote-btn:hover {

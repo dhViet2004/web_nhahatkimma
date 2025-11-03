@@ -96,11 +96,11 @@
   width: 80%;
 }
 
-.nav-item:first-child .nav-link {
+.nav-link.active {
   color: #f4c542;
 }
 
-.nav-item:first-child .nav-link::before {
+.nav-link.active::before {
   width: 80%;
 }
 

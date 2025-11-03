@@ -22,9 +22,6 @@ function Navigation() {
               CHƯƠNG TRÌNH BIỂU DIỄN
             </Link>
           </li>
-          <li className="nav-item">
-            <a href="#contact" className="nav-link">LIÊN HỆ</a>
-          </li>
         </ul>
       </div>
     </nav>

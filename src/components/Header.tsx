@@ -1,4 +1,5 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 declare global {
   interface Window {
@@ -15,16 +16,18 @@ function Header() {
         <div className="header-left">
           <div className="contact-item">
             <span className="label">TELEPHONE</span>
-            <span className="value">+84 123456789</span>
+            <span className="value">024 3845 7403</span>
           </div>
           <div className="contact-item">
             <span className="label">EMAIL</span>
-            <span className="value">onderaoeberg@gmail.com</span>
+            <span className="value">info@nhahatcheovietnam.vn</span>
           </div>
         </div>
 
         <div className="header-center">
-          <h1 className="theater-name">NHÀ HÁT SÂN KHẤU QUỐC GIA VIỆT NAM</h1>
+          <Link to="/" className="theater-name-link">
+            <h1 className="theater-name">NHÀ HÁT SÂN KHẤU QUỐC GIA VIỆT NAM</h1>
+          </Link>
         </div>
 
         <div className="header-right">
